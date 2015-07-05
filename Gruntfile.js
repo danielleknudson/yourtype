@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     copy: {
       build: {
         cwd: 'client',
-        src: [ '**' ],
+        src: ['**'],
         dest: 'public',
         expand: true
       },
@@ -21,15 +21,16 @@ module.exports = function (grunt) {
     watch: {
       sources: {
         files: [
-          'client/**/*.js'
+          'client/**/*.js',
+          'client/templates/*.html'
         ],
-        tasks: ['browserify']
+        tasks: ['exec']
       }
     },
     browserify: {
       vendor: {
         src: [
-          'client/**/*.js'
+          'client/javascripts/app.js'
         ],
         dest: 'public/app.js',
         options: {
@@ -41,7 +42,16 @@ module.exports = function (grunt) {
         dest: 'public/app.js',
         options: {
           external: ['br-jquery'],
+          transform: ['brfs'],
+          browserifyOptions: {
+            debug: true
+          }
         }
+      }
+    },
+    exec: {
+      browserify: {
+        command: 'browserify -t jstify client/javascripts/app.js > public/app.js'
       }
     }
   });
@@ -50,6 +60,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('jstify');
+  grunt.loadNpmTasks('grunt-exec');
 
 
   // Default tasks
