@@ -1,0 +1,36 @@
+{
+  "name": "yourtype",
+  "version": "0.0.0",
+  "description": "Chrome extension which allows you to modify font styles on web pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielleknudson/yourtype.git"
+  },
+  "author": "Danielle Knudson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielleknudson/yourtype/issues"
+  },
+  "homepage": "https://github.com/danielleknudson/yourtype#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.8.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-watchify": "^0.1.0",
+    "moment": "^2.10.3"
+  },
+  "dependencies": {
+    "backbone": "^1.2.1",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  }
+}
