@@ -3,26 +3,32 @@ var $ = require('jquery');
 var Backbone = require('backbone');
 var app = require('../app.js');
 var data = require('../fonts.data.js');
+var FormView = require('./form.view.js');
+var CSSResults = require('./cssresults.view.js');
 
 var AppView = Backbone.View.extend({
   initialize: function () {
-    console.log('AppView created');
+    this.form = new FormView({ 
+      $el: 'form.yourtype#form-container', 
+      model: this.model 
+    });
+    this.cssResults = new CSSResults({ 
+      $el: 'div.yourtype#css-container', 
+      model: this.model 
+    });
   },
 
   template: require('../../templates/app.template.html'),
 
-  events: {
-    'click change .yourtype#font-family, .yourtype#font-size, .yourtype#font-weight, .yourtype#font-style .yourtype#font-color': 'formHandler',
-    'keyup .yourtype#font-color': 'formHandler'
-  },
-
   render: function (elementPosition) {
-    console.log('trying to render app view!');
     this.setPositioning(elementPosition);
 
     this.$el.html(this.template(data));
+
+    this.form.setElement(this.$('form.yourtype#form-container')).render();
+    this.cssResults.setElement(this.$('div.yourtype#css-container')).render();
+
     this.$el.show();
-    console.log(this.$el);
     return this.$el;
   },
 
@@ -56,33 +62,6 @@ var AppView = Backbone.View.extend({
 
     return this.$el;
 
-  },
-
-  formHandler: function () {
-    console.log('asdfaasdfasdsd');
-    var newStyles = {};
-
-    if ($('.yourtype#font-family').val() !== "") {
-      newStyles['font-family'] = $('.yourtype#font-family').val();
-    }
-
-    if ($('.yourtype#font-size').val() !== "") {
-      newStyles['font-size'] =  $('.yourtype#font-size').val() + 'px';
-    }
-
-    if ($('.yourtype#font-weight').val() !== "") {
-      newStyles['font-weight'] = $('.yourtype#font-weight').val();
-    }
-
-    if ($('.yourtype#font-color').val() !== "") {
-      newStyles['color'] = '#' + $('.yourtype#font-color').val();
-    }
-
-    if ($('.yourtype#font-style').val() !== "None") {
-      newStyles['text-decoration'] = $('.yourtype#font-style').val();
-    }
-
-    this.model.updateStyles(data.elTag, newStyles);
   }
 });
 

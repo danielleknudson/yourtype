@@ -12,12 +12,12 @@ var AppView = require('./views/app.view.js');
 var data = require('./fonts.data.js');
 
 module.exports = $(document).ready(function () {
-  console.log('app is running');
 
   var app = new AppModel();
   var appView = new AppView({
     model: app,
-    $el: 'div.yourtype#app-container'
+    className: 'yourtype',
+    id: 'app-container'
   });
 
   $('body').on('click', 'h1, h2, h3, h4, h5, h6, span, p, li, section, article, aside, header, footer, nav, div, label, sup, figcaption, figure, main, pre, abbr, cite, sub, caption, th, td, legend ', function (event) {

@@ -10,28 +10,28 @@ div.yourtype#app-container {
 }
 
 /* app form */
-div.yourtype#app-container form.yourtype#yourtype-form {
+div.yourtype#app-container form.yourtype#form-container {
   width: 100%;
 }
 
 /* form select for font-family */
-div.yourtype#app-container form.yourtype#yourtype-form select.yourtype#font-family {
+div.yourtype#app-container form.yourtype#form-container select.yourtype#font-family {
 }
 
 /* form input for font-size */
-div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-size {
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-size {
 }
 
 /* form input for font-weight */
-div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-weight {
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight {
 }
 
 /* form input for font-color */
-div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-weight {
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight {
 }
 
 /* form select for font-style */
-div.yourtype#app-container form.yourtype#yourtype-form select.yourtype#font-style {
+div.yourtype#app-container form.yourtype#form-container select.yourtype#font-style {
 }
 
 /* css container */
@@ -50,19 +50,19 @@ div.yourtype div.yourtype#css-container textarea.yourtype#css-results {
 }
 
 /* shared styles */
-div.yourtype#app-container form.yourtype#yourtype-form select.yourtype#font-family,
-div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-size,
-div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-weight,
-div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-color,
-div.yourtype#app-container form.yourtype#yourtype-form select.yourtype#font-style {
+div.yourtype#app-container form.yourtype#form-container select.yourtype#font-family,
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-size,
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight,
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-color,
+div.yourtype#app-container form.yourtype#form-container select.yourtype#font-style {
   display: inline-block;
   height: 25px;
   width: 100%;
   margin: 5px 0;
 }
 
-div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-size,
-div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-weight {
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-size,
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight {
   box-sizing: border-box;
   padding: 1px 3px;
   border-radius: 2px;
