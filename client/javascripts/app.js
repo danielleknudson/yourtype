@@ -48,7 +48,7 @@ module.exports = $(document).ready(function () {
 
   }); // end of body listener for text elements
 
-  $('body').on('click', '.yourtype#app-container #close-picker', function (event) {
+  $('body').on('click', '.yourtype#app-container #close-yourtype', function (event) {
     event.preventDefault();
     appView.hide();
   });

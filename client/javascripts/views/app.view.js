@@ -12,8 +12,8 @@ var AppView = Backbone.View.extend({
   template: require('../../templates/app.template.html'),
 
   events: {
-    'change .yourtype#font-family, .yourtype#font-size, .yourtype#font-weight, .yourtype#font-style .yourtype#font-color': 'formHandler',
-    'click .class-selection>span': 'classDeselect'
+    'click change .yourtype#font-family, .yourtype#font-size, .yourtype#font-weight, .yourtype#font-style .yourtype#font-color': 'formHandler',
+    'keyup .yourtype#font-color': 'formHandler'
   },
 
   render: function (elementPosition) {
@@ -63,24 +63,26 @@ var AppView = Backbone.View.extend({
     var newStyles = {};
 
     if ($('.yourtype#font-family').val() !== "") {
-      newStyles.fontFamily = $('.yourtype#font-family').val();
+      newStyles['font-family'] = $('.yourtype#font-family').val();
     }
 
     if ($('.yourtype#font-size').val() !== "") {
-      newStyles.fontSize =  $('.yourtype#font-size').val() + 'px';
+      newStyles['font-size'] =  $('.yourtype#font-size').val() + 'px';
+    }
+
+    if ($('.yourtype#font-weight').val() !== "") {
+      newStyles['font-weight'] = $('.yourtype#font-weight').val();
     }
 
     if ($('.yourtype#font-color').val() !== "") {
-      newStyles.color = '#' + $('.yourtype#font-color').val();
+      newStyles['color'] = '#' + $('.yourtype#font-color').val();
     }
 
-    console.log('elTag', data.elTag);
-    this.model.updateStyles(data.elTag, newStyles);
-  },
+    if ($('.yourtype#font-style').val() !== "None") {
+      newStyles['text-decoration'] = $('.yourtype#font-style').val();
+    }
 
-  classDeselect: function (event) {
-    data.deselectedClasses = (!data.deselectedClasses) ? [] : data.deselectedClasses;
-    data.deselectedClasses.push(event.target.id);
+    this.model.updateStyles(data.elTag, newStyles);
   }
 });
 

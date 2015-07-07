@@ -1,9 +1,7 @@
-/* TESTING !!! zfdasdf asdfasdfs  */
-
 /* app container */
 div.yourtype#app-container {
-  padding: 15px;
-  width: 300px;
+  padding: 30px;
+  width: 200px;
   background: #012B35;
   color: #93A1A1;
   font-family: monaco;
@@ -25,6 +23,10 @@ div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourty
 }
 
 /* form input for font-weight */
+div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-weight {
+}
+
+/* form input for font-color */
 div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-weight {
 }
 
@@ -51,6 +53,7 @@ div.yourtype div.yourtype#css-container textarea.yourtype#css-results {
 div.yourtype#app-container form.yourtype#yourtype-form select.yourtype#font-family,
 div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-size,
 div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-weight,
+div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-color,
 div.yourtype#app-container form.yourtype#yourtype-form select.yourtype#font-style {
   display: inline-block;
   height: 25px;
