@@ -8,34 +8,28 @@ var CSSResults = require('./cssresults.view.js');
 
 var AppView = Backbone.View.extend({
   initialize: function () {
-    this.form = new FormView({ 
-      $el: 'form.yourtype#form-container', 
-      model: this.model 
+    this.form = new FormView({
+      $el: 'form.yourtype#form-container',
+      model: this.model
     });
-    this.cssResults = new CSSResults({ 
-      $el: 'div.yourtype#css-container', 
-      model: this.model 
+    this.cssResults = new CSSResults({
+      $el: 'div.yourtype#css-container',
+      model: this.model
     });
   },
-
   template: require('../../templates/app.template.html'),
-
   render: function (elementPosition) {
     this.setPositioning(elementPosition);
 
     this.$el.html(this.template(data));
-
     this.form.setElement(this.$('form.yourtype#form-container')).render();
     this.cssResults.setElement(this.$('div.yourtype#css-container')).render();
 
-    this.$el.show();
-    return this.$el;
+    return this.$el.show();
   },
-
   hide: function () {
     this.$el.hide();
   },
-
   setPositioning: function (elementPosition) {
     var widgetPosition = {};
     var $windowHeight = $(window).height();
@@ -61,7 +55,6 @@ var AppView = Backbone.View.extend({
     });
 
     return this.$el;
-
   }
 });
 

@@ -9,19 +9,14 @@ var FormView = Backbone.View.extend({
     _.bindAll(this, 'formHandler');
     this.render();
   },
-
   events: {
     'click change .yourtype#font-family, .yourtype#font-size, .yourtype#font-weight, .yourtype#font-style .yourtype#font-color': 'formHandler',
     'keyup .yourtype#font-color': 'formHandler'
   },
-
   template: require('../../templates/form.template.html'),
-
   render: function () {
-    this.$el.html(this.template(data));
-    return this.$el.html;
+    return this.$el.html(this.template(data));
   },
-
   formHandler: function () {
     var newStyles = {};
 
