@@ -9,6 +9,12 @@ module.exports = function (grunt) {
         dest: 'public',
         expand: true
       },
+      styles: {
+        cwd: 'client/css',
+        src: ['**'],
+        dest: 'public/css',
+        expand: true
+      }
     },
     jshint: {
       files: ['Gruntfile.js', 'client/**/*.js'],
@@ -19,11 +25,15 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      sources: {
+      styles: {
+        files: [
+          'client/css/**/*.css'
+        ],
+        tasks: ['copy:styles']
+      },
+      javascripts: {
         files: [
           'client/**/*.js',
-          'client/templates/*.html',
-          'client/css/*.css'
         ],
         tasks: ['exec']
       }
@@ -63,7 +73,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('jstify');
   grunt.loadNpmTasks('grunt-exec');
-
 
   // Default tasks
   grunt.registerTask('dev', ['watch']);

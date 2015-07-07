@@ -1,27 +1,4 @@
-/*<div class="yourtype" id="app-container">
-  <form class="yourtype" id="yourtype-form">
-    <!-- font family -->
-    <select class="yourtype" id="font-family">
-      <% _.each(fonts, function (font) { %>
-      <option class="yourtype" val="<%- font.name %>"><%- font.name %></option>
-      <% }); %>
-    </select>
-    <!-- font size -->
-    <input type="text" class="yourtype" id="font-size">
-    <!-- font weight -->
-    <input type="text" class="yourtype" id="font-weight">
-    <!-- font style -->
-    <select class="yourtype" id="font-style">
-      <option class="yourtype" val="underline">Underline</option>
-      <option class="yourtype" val="italics">Italics</option>
-      <option class="yourtype" val="lowercase">Lowercase</option>
-      <option class="yourtype" val="uppercase">Uppercase</option>
-    </select>
-  </form>
-  <div class="yourtype" id="css-container">
-    <textarea class="yourtype" id="css-results"></textarea>
-  </div>
-</div>*/
+/* TESTING !!! zfdasdf asdfasdfs  */
 
 /* app container */
 div.yourtype#app-container {
@@ -30,7 +7,7 @@ div.yourtype#app-container {
   background: #012B35;
   color: #93A1A1;
   font-family: monaco;
-  font-size: 14px;
+  font-size: 12px;
   border-radius: 2px;
 }
 

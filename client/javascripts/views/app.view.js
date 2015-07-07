@@ -12,7 +12,7 @@ var AppView = Backbone.View.extend({
   template: require('../../templates/app.template.html'),
 
   events: {
-    'change .yourtype#font-family, .yourtype#font-size, .yourtype#font-weight, .yourtype#font-style': 'formHandler',
+    'change .yourtype#font-family, .yourtype#font-size, .yourtype#font-weight, .yourtype#font-style .yourtype#font-color': 'formHandler',
     'click .class-selection>span': 'classDeselect'
   },
 
@@ -59,7 +59,7 @@ var AppView = Backbone.View.extend({
   },
 
   formHandler: function () {
-
+    console.log('asdfaasdfasdsd');
     var newStyles = {};
 
     if ($('.yourtype#font-family').val() !== "") {
