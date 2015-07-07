@@ -1,5 +1,94 @@
-#app-yourtype-container{
-  width: 200px;
-  height: 200px;
-  background: red;
+/*<div class="yourtype" id="app-container">
+  <form class="yourtype" id="yourtype-form">
+    <!-- font family -->
+    <select class="yourtype" id="font-family">
+      <% _.each(fonts, function (font) { %>
+      <option class="yourtype" val="<%- font.name %>"><%- font.name %></option>
+      <% }); %>
+    </select>
+    <!-- font size -->
+    <input type="text" class="yourtype" id="font-size">
+    <!-- font weight -->
+    <input type="text" class="yourtype" id="font-weight">
+    <!-- font style -->
+    <select class="yourtype" id="font-style">
+      <option class="yourtype" val="underline">Underline</option>
+      <option class="yourtype" val="italics">Italics</option>
+      <option class="yourtype" val="lowercase">Lowercase</option>
+      <option class="yourtype" val="uppercase">Uppercase</option>
+    </select>
+  </form>
+  <div class="yourtype" id="css-container">
+    <textarea class="yourtype" id="css-results"></textarea>
+  </div>
+</div>*/
+
+/* app container */
+div.yourtype#app-container {
+  padding: 15px;
+  width: 300px;
+  background: #012B35;
+  color: #93A1A1;
+  font-family: monaco;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+/* app form */
+div.yourtype#app-container form.yourtype#yourtype-form {
+  width: 100%;
+}
+
+/* form select for font-family */
+div.yourtype#app-container form.yourtype#yourtype-form select.yourtype#font-family {
+}
+
+/* form input for font-size */
+div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-size {
+}
+
+/* form input for font-weight */
+div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-weight {
+}
+
+/* form select for font-style */
+div.yourtype#app-container form.yourtype#yourtype-form select.yourtype#font-style {
+}
+
+/* css container */
+div.yourtype div.yourtype#css-container {
+  width: 100%;
+}
+
+/* textarea for css results */
+div.yourtype div.yourtype#css-container textarea.yourtype#css-results {
+  box-sizing: border-box;
+  width: 100%;
+  resize: none;
+  border-radius: 2px;
+  border: 1px solid #586E74;
+  background: #012B35;
+}
+
+/* shared styles */
+div.yourtype#app-container form.yourtype#yourtype-form select.yourtype#font-family,
+div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-size,
+div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-weight,
+div.yourtype#app-container form.yourtype#yourtype-form select.yourtype#font-style {
+  display: inline-block;
+  height: 25px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-size,
+div.yourtype#app-container form.yourtype#yourtype-form input[type="text"].yourtype#font-weight {
+  box-sizing: border-box;
+  padding: 1px 3px;
+  border-radius: 2px;
+  border: 1px solid #586E74;
+  background: #012B35;
+  color: #85981B;
+  font-size: 14px;
+  font-family: monaco;
 }

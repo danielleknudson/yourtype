@@ -22,7 +22,8 @@ module.exports = function (grunt) {
       sources: {
         files: [
           'client/**/*.js',
-          'client/templates/*.html'
+          'client/templates/*.html',
+          'client/css/*.css'
         ],
         tasks: ['exec']
       }

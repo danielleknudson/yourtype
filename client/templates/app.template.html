@@ -1,16 +1,36 @@
 <div class="yourtype" id="app-container">
-  <form class="yourtype" id="yourtype-form">
+  <h1>YourType</h1>
+  <!-- the selected element has classes -->
+  <% if (klasses !== null) { %>
+  <span class="yourtype" id="currently-editing">You are currently editing <strong><%- elTag %></strong> elements, with the below classes:</span>
+  <div class="yourtype edit-class" id="classes-to-select">
+    <% _.each(klasses, function (klass) { %>
+    <span class="yourclass" id="<%- klass %>"><%- klass %></span>
+    <% }); %>
+  </div>
+  <!-- the selected element doesn't have classes -->
+  <% } else { %>
+  <span class="yourtype" id="currently-editing">You are currently editing <strong><%- elTag %> ></strong> elements:
+  <% } %>
+  <form class="yourtype" id="yourtype-form" action="#">
     <!-- font family -->
+    <label class="yourtype" for="font-family">Font Family</label>
     <select class="yourtype" id="font-family">
       <% _.each(fonts, function (font) { %>
       <option class="yourtype" val="<%- font.name %>"><%- font.name %></option>
       <% }); %>
     </select>
     <!-- font size -->
+    <label class="yourtype" for="font-size">Font Size</label>
     <input type="text" class="yourtype" id="font-size">
     <!-- font weight -->
+    <label class="yourtype" for="font-weight">Font Weight</label>
     <input type="text" class="yourtype" id="font-weight">
+    <!-- font color -->
+    <label class="yourtype" for="font-color">Font Color</label>
+    <input type="text" class="yourtype" id="font-color">
     <!-- font style -->
+    <label class="yourtype" for="font-style">Font Style</label>
     <select class="yourtype" id="font-style">
       <option class="yourtype" val="underline">Underline</option>
       <option class="yourtype" val="italics">Italics</option>
@@ -19,6 +39,7 @@
     </select>
   </form>
   <div class="yourtype" id="css-container">
+    <label class="yourtype" for="css-results">CSS</label>
     <textarea class="yourtype" id="css-results"></textarea>
   </div>
 </div>

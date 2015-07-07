@@ -34,6 +34,7 @@
     "backbone": "^1.2.1",
     "brfs": "^1.4.0",
     "jquery": "^2.1.4",
+    "jstify": "^0.11.0",
     "underscore": "^1.8.3"
   }
 }
