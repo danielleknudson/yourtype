@@ -1,9 +1,11 @@
-var _ = require('underscore');
-var $ = require('jquery');
-var Backbone = require('backbone');
-var data = require('../fonts.data.js');
+// var _ = require('underscore');
+// var $ = require('jquery');
+// var Backbone = require('backbone');
+// var data = require('../fonts.data.js');
 
-var FormView = Backbone.View.extend({
+var yourtype = yourtype || {};
+
+yourtype.FormView = Backbone.View.extend({
   el: 'form.yourtype#form-container',
   initialize: function () {
     _.bindAll(this, 'formHandler');
@@ -50,5 +52,3 @@ var FormView = Backbone.View.extend({
     console.log('change happened');
   }
 });
-
-module.exports = FormView;

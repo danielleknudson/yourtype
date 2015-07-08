@@ -1,25 +1,27 @@
-var _ = require('underscore');
-var $ = require('jquery');
-var Backbone = require('backbone');
-var app = require('../app.js');
-var data = require('../fonts.data.js');
-var FormView = require('./form.view.js');
-var CSSResults = require('./cssresults.view.js');
+// var _ = require('underscore');
+// var $ = require('jquery');
+// var Backbone = require('backbone');
+// var app = require('../app.js');
+// var data = require('../fonts.data.js');
+// var FormView = require('./form.view.js');
+// var CSSResults = require('./cssresults.view.js');
 
-var AppView = Backbone.View.extend({
+var yourtype = yourtype || {}.
+
+yourtype.AppView = Backbone.View.extend({
   initialize: function () {
     _.bindAll(this, 'render');
 
-    this.form = new FormView({
+    this.form = new yourtype.FormView({
       $el: 'form.yourtype#form-container',
       model: this.model
     });
-    this.cssResults = new CSSResults({
+    this.cssResults = new yourtype.CSSResults({
       $el: 'div.yourtype#css-container',
       model: this.model
     });
   },
-  template: _.template(require('../../templates/app.template.html')),
+  template: new EJS({url: '../../templates/app.template.ejs'}),
   render: function (elementPosition) {
     console.log(typeof this.template);
     this.setPositioning(elementPosition);
@@ -60,5 +62,3 @@ var AppView = Backbone.View.extend({
     return this.$el;
   }
 });
-
-module.exports = AppView;

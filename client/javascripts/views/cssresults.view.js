@@ -1,8 +1,10 @@
-var _ = require('underscore');
-var $ = require('jquery');
-var Backbone = require('backbone');
+// var _ = require('underscore');
+// var $ = require('jquery');
+// var Backbone = require('backbone');
 
-var CSSResults = Backbone.View.extend({
+var yourtype = yourtype || {};
+
+yourtype.CSSResults = Backbone.View.extend({
   el: 'div.yourtype#css-container',
   initialize: function () {
     this.listenTo(this.model, 'updateCSSResults', function () {
@@ -22,5 +24,3 @@ var CSSResults = Backbone.View.extend({
     return this.$el;
   }
 });
-
-module.exports = CSSResults;

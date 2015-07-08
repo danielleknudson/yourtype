@@ -1,19 +1,9 @@
-var _ = require('underscore');
+var yourtype = yourtype || {};
 
-_.templateSettings = {
-    interpolate: /\{\{(.+?)\}\}/g
-};
+$(document).ready(function () {
 
-var $ = require('jquery');
-var Backbone = require('backbone');
-var AppModel = require('./models/app.model.js');
-var AppView = require('./views/app.view.js');
-var data = require('./fonts.data.js');
-
-module.exports = $(document).ready(function () {
-
-  var app = new AppModel();
-  var appView = new AppView({
+  var app = new yourtype.AppModel();
+  var appView = new yourtype.AppView({
     model: app,
     className: 'yourtype',
     id: 'app-container'
@@ -30,8 +20,8 @@ module.exports = $(document).ready(function () {
     // get the element's classes
     var klasses = this.className.split(/\s+/);
 
-    data.elTag = elTag;
-    data.klasses = (klasses[0] === "") ? null : klasses;
+    yourtype.data.elTag = elTag;
+    yourtype.data.klasses = (klasses[0] === "") ? null : klasses;
 
     if (klasses[0] !== "") {
       elTag = $(elTag + '.' + klasses.join("."));

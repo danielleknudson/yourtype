@@ -1,4 +1,6 @@
-module.exports = {
+var yourtype = yourtype || {};
+
+yourtype.data = {
   fonts: [{
     name: 'Select a font family',
     value: '',
@@ -109,5 +111,6 @@ module.exports = {
     value: 'Monaco',
     fallback: 'monospace',
     weights: [],
-  }, ]
+  }, 
+  ]
 };

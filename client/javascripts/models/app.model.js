@@ -1,8 +1,6 @@
-var _ = require('underscore');
-var $ = require('jquery');
-var Backbone = require('backbone');
+yourtype = yourtype || {};
 
-var AppModel = Backbone.Model.extend({
+yourtype.AppModel = Backbone.Model.extend({
   initialize: function () {
     this.set('currentStyles', '');
   },
@@ -13,5 +11,3 @@ var AppModel = Backbone.Model.extend({
     this.trigger('updateCSSResults', this.get('currentStyles'));
   }
 });
-
-module.exports = AppModel;
