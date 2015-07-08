@@ -5,7 +5,7 @@ div.yourtype#app-container {
   background: #FFFFFF;
   color: #1A2529;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, .2);
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .3);
@@ -29,7 +29,12 @@ div.yourtype#app-container div.yourtype.edit-class#classes-to-select span.yourcl
   color: #DA3435;
   border: 1px solid #DA3435;
   border-radius: 2px;
+  margin-right: 3px;
   font-weight: 600;
+}
+
+div.yourtype#app-container div.yourtype.edit-class#classes-to-select span.yourclass:last-child {
+  margin-right: 0;
 }
 
 /* app form */
@@ -41,17 +46,17 @@ div.yourtype#app-container form.yourtype#form-container {
 div.yourtype div.yourtype#css-container {
   width: 100%;
   margin-top: 10px;
-  border-top: 1px solid rgba(0, 0, 0, .2);
   padding: 10px 0 0 0;
+  font-size: 12px;
 }
 
 /* textarea for css results */
-div.yourtype div.yourtype#css-container textarea.yourtype#css-results {
+div.yourtype div.yourtype#css-container pre.yourtype#css-results {
   box-sizing: border-box;
   width: 100%;
-  resize: none;
   border-radius: 2px;
-  border: 1px solid rgba(0, 0, 0, .2);
+  padding: 3px;
+  margin: 0;
 }
 
 /* shared styles */

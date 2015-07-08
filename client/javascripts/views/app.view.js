@@ -1,12 +1,4 @@
-// var _ = require('underscore');
-// var $ = require('jquery');
-// var Backbone = require('backbone');
-// var app = require('../app.js');
-// var data = require('../fonts.data.js');
-// var FormView = require('./form.view.js');
-// var CSSResults = require('./cssresults.view.js');
-
-var yourtype = yourtype || {}.
+var yourtype = yourtype || {};
 
 yourtype.AppView = Backbone.View.extend({
   initialize: function () {
@@ -21,12 +13,13 @@ yourtype.AppView = Backbone.View.extend({
       model: this.model
     });
   },
-  template: new EJS({url: '../../templates/app.template.ejs'}),
+  template: _.template(yourtype.templates.app),
+
   render: function (elementPosition) {
-    console.log(typeof this.template);
     this.setPositioning(elementPosition);
 
-    this.$el.html(this.template(data));
+    console.log('yourtype.data in app.view', yourtype.data);
+    this.$el.html(this.template(yourtype.data));
     this.form.setElement(this.$('form.yourtype#form-container')).render();
     this.cssResults.setElement(this.$('div.yourtype#css-container')).render();
 

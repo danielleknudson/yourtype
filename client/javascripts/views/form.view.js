@@ -1,8 +1,3 @@
-// var _ = require('underscore');
-// var $ = require('jquery');
-// var Backbone = require('backbone');
-// var data = require('../fonts.data.js');
-
 var yourtype = yourtype || {};
 
 yourtype.FormView = Backbone.View.extend({
@@ -16,9 +11,10 @@ yourtype.FormView = Backbone.View.extend({
     'keyup input.yourtype': 'formHandler',
     'change .yourtype#font-family': 'formHandler'
   },
-  template: require('../../templates/form.template.html'),
+  template: _.template(yourtype.templates.form),
+
   render: function () {
-    return this.$el.html(_.template(this.template, data));
+    return this.$el.html(this.template(yourtype.data));
   },
   formHandler: function () {
     var newStyles = {};
@@ -45,7 +41,7 @@ yourtype.FormView = Backbone.View.extend({
       newStyles['line-height'] = 'initial';
     }
 
-    this.model.updateStyles(data.elTag, newStyles);
+    this.model.updateStyles(yourtype.data.elTag, newStyles);
   },
 
   changeHandler: function () {

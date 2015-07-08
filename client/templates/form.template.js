@@ -1,4 +1,7 @@
-module.exports = '\
+var yourtype = yourtype || {};
+yourtype.templates = yourtype.templates || {};
+
+yourtype.templates.form = '\
 <table class="yourtype"> \
   <tbody class="yourtype"> \
     <tr class="yourtype"> \
@@ -7,8 +10,8 @@ module.exports = '\
         <label class="yourtype" for="font-family">Font Family</label> \
         <select class="yourtype" id="font-family"> \
           <% _.each(fonts, function (font) { %> \
-            <option class="yourtype" val="<%- font.name %>"> \
-              <%- font.name %> \
+            <option class="yourtype" val="<%= font.name %>"> \
+              <%= font.name %> \
             </option> \
             <% }); %> \
         </select> \
