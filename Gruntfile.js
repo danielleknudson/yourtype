@@ -62,7 +62,7 @@ module.exports = function (grunt) {
     },
     exec: {
       browserify: {
-        command: 'browserify -t jstify client/javascripts/app.js > public/app.js'
+        command: 'browserify client/javascripts/app.js > public/app.js'
       }
     }
   });

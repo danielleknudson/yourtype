@@ -1,12 +1,35 @@
 /* app container */
 div.yourtype#app-container {
-  padding: 30px;
-  width: 200px;
-  background: #012B35;
-  color: #93A1A1;
-  font-family: monaco;
-  font-size: 12px;
+  padding: 20px;
+  width: 300px;
+  background: #FFFFFF;
+  color: #1A2529;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 10px;
   border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+div.yourtype#app-container div.yourtype#close-yourtype {
+  float: right;
+}
+
+div.yourtype#app-container span.yourtype#currently-editing strong {
+  color: #DA3435;
+}
+
+div.yourtype#app-container div.yourtype.edit-class#classes-to-select {
+  text-align: center;
+  padding: 20px 0;
+}
+
+div.yourtype#app-container div.yourtype.edit-class#classes-to-select span.yourclass {
+  padding: 5px;
+  color: #DA3435;
+  border: 1px solid #DA3435;
+  border-radius: 2px;
+  font-weight: 600;
 }
 
 /* app form */
@@ -14,29 +37,12 @@ div.yourtype#app-container form.yourtype#form-container {
   width: 100%;
 }
 
-/* form select for font-family */
-div.yourtype#app-container form.yourtype#form-container select.yourtype#font-family {
-}
-
-/* form input for font-size */
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-size {
-}
-
-/* form input for font-weight */
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight {
-}
-
-/* form input for font-color */
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight {
-}
-
-/* form select for font-style */
-div.yourtype#app-container form.yourtype#form-container select.yourtype#font-style {
-}
-
 /* css container */
 div.yourtype div.yourtype#css-container {
   width: 100%;
+  margin-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, .2);
+  padding: 10px 0 0 0;
 }
 
 /* textarea for css results */
@@ -45,30 +51,34 @@ div.yourtype div.yourtype#css-container textarea.yourtype#css-results {
   width: 100%;
   resize: none;
   border-radius: 2px;
-  border: 1px solid #586E74;
-  background: #012B35;
+  border: 1px solid rgba(0, 0, 0, .2);
 }
 
 /* shared styles */
+div.yourtype#app-container form.yourtype#form-container table.yourtype tbody.yourtype tr.yourtype td.yourtype label.yourtype,
+div.yourtype#app-container div.yourtype#css-container label.yourtype {
+  display: inline-block;
+  margin: 0 0 5px 0;
+}
+
 div.yourtype#app-container form.yourtype#form-container select.yourtype#font-family,
 div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-size,
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#line-height,
 div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight,
 div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-color,
 div.yourtype#app-container form.yourtype#form-container select.yourtype#font-style {
   display: inline-block;
   height: 25px;
   width: 100%;
-  margin: 5px 0;
 }
 
 div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-size,
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight {
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#line-height,
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight,
+div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-color {
   box-sizing: border-box;
   padding: 1px 3px;
   border-radius: 2px;
-  border: 1px solid #586E74;
-  background: #012B35;
-  color: #85981B;
-  font-size: 14px;
-  font-family: monaco;
+  border: 1px solid rgba(0, 0, 0, .2);
+  font-size: 10px;
 }

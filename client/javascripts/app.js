@@ -1,4 +1,3 @@
-var fs = require('fs');
 var _ = require('underscore');
 
 _.templateSettings = {
@@ -21,7 +20,6 @@ module.exports = $(document).ready(function () {
   });
 
   $('body').on('click', 'h1, h2, h3, h4, h5, h6, span, p, li, section, article, aside, header, footer, nav, div, label, sup, figcaption, figure, main, pre, abbr, cite, sub, caption, th, td, legend ', function (event) {
-    console.log('click happened!');
     // don't listen for clicks on the fontsWidgetApp
     if ($(event.target).is('div.yourtype#app-container, div.yourtype#app-container *')) {
       return;

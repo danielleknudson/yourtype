@@ -10,12 +10,13 @@ var FormView = Backbone.View.extend({
     this.render();
   },
   events: {
-    'click change .yourtype#font-family, .yourtype#font-size, .yourtype#font-weight, .yourtype#font-style .yourtype#font-color': 'formHandler',
-    'keyup .yourtype#font-color': 'formHandler'
+    'focusout .yourtype#font-size, .yourtype#font-weight, .yourtype#font-style .yourtype#font-color': 'formHandler',
+    'keyup input.yourtype': 'formHandler',
+    'change .yourtype#font-family': 'formHandler'
   },
   template: require('../../templates/form.template.html'),
   render: function () {
-    return this.$el.html(this.template(data));
+    return this.$el.html(_.template(this.template, data));
   },
   formHandler: function () {
     var newStyles = {};
@@ -36,11 +37,17 @@ var FormView = Backbone.View.extend({
       newStyles['color'] = '#' + $('.yourtype#font-color').val();
     }
 
-    if ($('.yourtype#font-style').val() !== "None") {
-      newStyles['text-decoration'] = $('.yourtype#font-style').val();
+    if ($('.yourtype#line-height').val() !== "") {
+      newStyles['line-height'] = $('.yourtype#line-height').val() + 'px';
+    } else {
+      newStyles['line-height'] = 'initial';
     }
 
     this.model.updateStyles(data.elTag, newStyles);
+  },
+
+  changeHandler: function () {
+    console.log('change happened');
   }
 });
 

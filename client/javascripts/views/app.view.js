@@ -8,6 +8,8 @@ var CSSResults = require('./cssresults.view.js');
 
 var AppView = Backbone.View.extend({
   initialize: function () {
+    _.bindAll(this, 'render');
+
     this.form = new FormView({
       $el: 'form.yourtype#form-container',
       model: this.model
@@ -17,8 +19,9 @@ var AppView = Backbone.View.extend({
       model: this.model
     });
   },
-  template: require('../../templates/app.template.html'),
+  template: _.template(require('../../templates/app.template.html')),
   render: function (elementPosition) {
+    console.log(typeof this.template);
     this.setPositioning(elementPosition);
 
     this.$el.html(this.template(data));
@@ -50,7 +53,7 @@ var AppView = Backbone.View.extend({
     this.$el.css({
       'left': widgetPosition.left,
       'top': widgetPosition.top,
-      'z-index': '9000000000',
+      'z-index': '90000000000',
       'position': 'absolute'
     });
 

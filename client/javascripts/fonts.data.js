@@ -1,5 +1,10 @@
 module.exports = {
   fonts: [{
+    name: 'Select a font family',
+    value: '',
+    fallback: '',
+    weights: [],
+  }, {
     name: 'Arvo',
     value: 'Arvo',
     fallback: 'serif',
@@ -50,16 +55,6 @@ module.exports = {
     fallback: 'serif',
     weights: [],
   }, {
-    name: 'Palatino Linotype',
-    value: 'Palatino-Linotype',
-    fallback: 'serif',
-    weights: [],
-  }, {
-    name: 'Palatino',
-    value: 'Palatino',
-    fallback: 'serif',
-    weights: [],
-  }, {
     name: 'Times New Roman',
     value: 'Times-New-Roman',
     fallback: 'serif',
@@ -77,21 +72,6 @@ module.exports = {
   }, {
     name: 'Arial Black',
     value: 'Arial-Black',
-    fallback: 'sans-serif',
-    weights: [],
-  }, {
-    name: 'Gadget',
-    value: 'Gadget',
-    fallback: 'sans-serif',
-    weights: [],
-  }, {
-    name: 'Impact',
-    value: 'Impact',
-    fallback: 'sans-serif',
-    weights: [],
-  }, {
-    name: 'Lucida Sans Unicode',
-    value: 'Lucida-Sans-Unicode',
     fallback: 'sans-serif',
     weights: [],
   }, {
