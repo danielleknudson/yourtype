@@ -7,8 +7,8 @@
     "activeTab"
   ],
   "icons": { 
-    "48": "assets/48_logo.png",
-    "128": "assets/128_logo.png",
+    "48": "assets/128_logo.png",
+    "128": "assets/256_logo.png",
     "256": "assets/256_logo.png"
   },
   "background": {
@@ -17,7 +17,7 @@
   },
   "browser_action": {
     "default_title": "YourType",
-    "default_icon": "assets/19_logo.png"
+    "default_icon": "assets/48_logo.png"
   }
 }
 
