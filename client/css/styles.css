@@ -31,11 +31,22 @@ span#currently-editing.yourtype strong.yourtype {
 }
 
 /*Label Styles*/
-form#form-container.yourtype label.yourtype,
-div#css-container.yourtype label.yourtype {
+form#form-container.yourtype label.yourtype {
   color: #d2d8dc!important;
+}
+
+form#form-container.yourtype label.yourtype,
+div#css-container.yourtype label.yourtype  {
   display: inline-block!important;
   margin-top: 15px!important;
+}
+
+div#css-container.yourtype pre#css-results.yourtype {
+  color: #F2594B!important;
+}
+
+div#css-container.yourtype label.yourtype {
+  color: #FFFFFF!important;
 }
 
 form#form-container.yourtype label.yourtype:first-child {

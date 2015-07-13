@@ -22,9 +22,9 @@ yourtype.CSSResults = Backbone.View.extend({
 
         if (item !== "Select a font family"){
           if (key === 'font-family'){
-            string += '\t' + key + ': "' + item + '", ' + '\n';
+            string += key + ': "' + item + '", ' + '\n';
           } else {
-            string += '\t' + key + ': ' + item + ', ' + '\n';
+            string += key + ': ' + item + ', ' + '\n';
           }
         }
       });
