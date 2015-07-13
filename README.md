@@ -37,9 +37,7 @@ Install npm modules if you want to update the files in lib/ by copy/pasting from
 npm install
 ```
 
-```
 Modify and use index.html to test
-```
 
 ### Roadmap
 
