@@ -12,8 +12,6 @@ Easily edit your web page's typography and copy corresponding CSS.
 1. [Requirements](#requirements)
 1. [Development](#development)
     1. [Installing Dependencies](#installing-dependencies)
-    1. [Tasks](#tasks)
-1. [Team](#team)
 1. [Contributing](#contributing)
 
 ## Usage
@@ -37,6 +35,10 @@ Install npm modules if you want to update the files in lib/ by copy/pasting from
 
 ```sh
 npm install
+```
+
+```
+Modify and use index.html to test
 ```
 
 ### Roadmap
