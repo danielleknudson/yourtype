@@ -9,9 +9,9 @@ $(document).ready(function () {
     id: 'app-container'
   });
 
-  $('body').on('click', 'h1, h2, h3, h4, h5, h6, span, p, li, section, article, aside, header, footer, nav, div, label, sup, figcaption, figure, main, pre, abbr, cite, sub, caption, th, td, legend ', function (event) {
+  $('body').on('click', 'h1, h2, h3, h4, h5, h6, span, p, li, div, label, pre, td', function (event) {
     // don't listen for clicks on the fontsWidgetApp
-    if ($(event.target).is('div.yourtype#app-container, div.yourtype#app-container *')) {
+    if ($(event.target).is('.yourtype, div.yourtype#app-container *')) {
       return;
     }
 
@@ -26,6 +26,8 @@ $(document).ready(function () {
     if (klasses[0] !== "") {
       elTag = $(elTag + '.' + klasses.join("."));
     }
+
+    console.log(klasses);
 
     var position = {
       left: $(this).offset().left,

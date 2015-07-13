@@ -16,7 +16,7 @@ yourtype.CSSResults = Backbone.View.extend({
   render: function (styles) {
     if (styles) {
 
-      var string = '\n{' + '\n';
+      var string = '';
       
       _.each(styles, function(item, key){
 
@@ -30,7 +30,6 @@ yourtype.CSSResults = Backbone.View.extend({
       });
 
       string = string.slice(0, string.length - 3);
-      string += '\n}';
 
       this.$el.html(this.template({obj: string}));
     } else {

@@ -5,6 +5,7 @@ yourtype.AppModel = Backbone.Model.extend({
     this.set('currentStyles', '');
   },
   updateStyles: function (elements, newStyles) {
+    console.log('elements to change', elements);
     $(elements).css(newStyles);
     this.set('currentStyles', newStyles);
     console.log(this.get('currentStyles'));

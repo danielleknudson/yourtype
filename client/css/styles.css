@@ -1,89 +1,115 @@
 /* app container */
-div.yourtype#app-container {
-  padding: 20px;
-  width: 300px;
-  background: #FFFFFF;
-  color: #1A2529;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 12px;
-  border-radius: 2px;
-  border: 1px solid rgba(0, 0, 0, .2);
-  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .3);
+div#app-container.yourtype {
+  padding: !important;
+  width: 250px!important;
+  box-sizing: border-box!important;
+  background: #364047!important;
+  border-radius: 3px!important;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .3)!important;
+  padding: 15px!important;
 }
 
-div.yourtype#app-container div.yourtype#close-yourtype {
-  float: right;
+div#app-container.yourtype,
+div#app-container.yourtype * {
+  color: #FFFFFF!important;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif!important;
+  font-size: 12px!important;
+  text-shadow: 0 1px 0 #000000!important;
 }
 
-div.yourtype#app-container span.yourtype#currently-editing strong {
-  color: #DA3435;
+div#close-yourtype.yourtype {
+  float: right!important;
 }
 
-div.yourtype#app-container div.yourtype.edit-class#classes-to-select {
-  text-align: center;
-  padding: 20px 0;
+span#currently-editing.yourtype {
+  margin-bottom: 10px!important;
+  display: inline-block!important;
 }
 
-div.yourtype#app-container div.yourtype.edit-class#classes-to-select span.yourclass {
-  padding: 5px;
-  color: #DA3435;
-  border: 1px solid #DA3435;
-  border-radius: 2px;
-  margin-right: 3px;
-  font-weight: 600;
+span#currently-editing.yourtype strong.yourtype {
+  color: #F2594B!important;
 }
 
-div.yourtype#app-container div.yourtype.edit-class#classes-to-select span.yourclass:last-child {
-  margin-right: 0;
+/*Label Styles*/
+form#form-container.yourtype label.yourtype,
+div#css-container.yourtype label.yourtype {
+  color: #d2d8dc!important;
+  display: inline-block!important;
+  margin-top: 15px!important;
 }
 
-/* app form */
-div.yourtype#app-container form.yourtype#form-container {
-  width: 100%;
+form#form-container.yourtype label.yourtype:first-child {
+  margin-top: 0!important;
 }
 
-/* css container */
-div.yourtype div.yourtype#css-container {
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px 0 0 0;
-  font-size: 12px;
+
+form#form-container.yourtype div#info.yourtype {
+  display: inline!important;
+  font-size: 10px!important;
+  padding: 1px 3px!important;
+  background: #45515a!important;
+  border: 1px solid #3e4850!important;
 }
 
-/* textarea for css results */
-div.yourtype div.yourtype#css-container pre.yourtype#css-results {
-  box-sizing: border-box;
-  width: 100%;
-  border-radius: 2px;
-  padding: 3px;
-  margin: 0;
+form#form-container.yourtype div#info.yourtype.tooltip {
+  display: inline!important;
+  position: relative!important;
 }
 
-/* shared styles */
-div.yourtype#app-container form.yourtype#form-container table.yourtype tbody.yourtype tr.yourtype td.yourtype label.yourtype,
-div.yourtype#app-container div.yourtype#css-container label.yourtype {
-  display: inline-block;
-  margin: 0 0 5px 0;
+form#form-container.yourtype div#info.yourtype.tooltip:hover:after {
+  background: #fbceca!important;
+  text-shadow: none!important;
+  border-radius: 3px!important;
+  color: #364047!important;
+  content: "You may need to install these fonts to your computer in order to see font changes take effect."!important;
+  padding: 15px!important;
+  z-index: 1000000000!important;
+  width: 150px!important;
+  position: absolute!important;
+  bottom: -50px!important;
+  left: 20px!important;
 }
 
-div.yourtype#app-container form.yourtype#form-container select.yourtype#font-family,
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-size,
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#line-height,
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight,
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-color,
-div.yourtype#app-container form.yourtype#form-container select.yourtype#font-style {
-  display: inline-block;
-  height: 25px;
-  width: 100%;
+
+form#form-container.yourtype select#font-family.yourtype {
+  margin-top: 5px!important;
+  box-sizing: border-box!important;
+  background:  #364047!important;
+  border: 1px solid #6a7c8a!important;
+  padding: 5px!important;
+  color: #FFFFFF!important;
+  display: inline-block!important;
+  width: 100%!important;
+  border-radius: 3px!important;
 }
 
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-size,
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#line-height,
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-weight,
-div.yourtype#app-container form.yourtype#form-container input[type="text"].yourtype#font-color {
-  box-sizing: border-box;
-  padding: 1px 3px;
-  border-radius: 2px;
-  border: 1px solid rgba(0, 0, 0, .2);
-  font-size: 10px;
+/*Input Styles*/
+form#form-container.yourtype input#font-size.yourtype,
+form#form-container.yourtype input#font-weight.yourtype,
+form#form-container.yourtype input#line-height.yourtype,
+form#form-container.yourtype input#font-color.yourtype {
+  margin-top: 5px!important;
+  box-sizing: border-box!important;
+  background:  #364047!important;
+  border: 1px solid #6a7c8a!important;
+  padding: 5px!important;
+  color: #FFFFFF!important;
+  display: inline-block!important;
+  width: 100%!important;
+  border-radius: 3px!important;
 }
+
+div#classes-to-select.yourtype.edit-class {
+  text-align: center!important;
+}
+
+/* Classes Being Edited */
+div#classes-to-select.yourtype.edit-class span.yourtype {
+  color: #F2594B!important;
+  border: 1px solid #F2594B!important;
+  padding: 1px 3px!important;
+  border-radius: 3px!important;
+  display: inline-block!important;
+  margin-bottom: 15px!important;
+} 
+

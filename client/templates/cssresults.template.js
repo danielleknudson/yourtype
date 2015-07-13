@@ -2,12 +2,11 @@ var yourtype = yourtype || {};
 yourtype.templates = yourtype.templates || {};
 
 yourtype.templates.cssresults = '\
-<label class="yourtype" for="css-results">CSS</label> \
-<pre class="yourtype" id="css-results" readonly> \
 <% if(obj) { %> \
+  <label class="yourtype" for="css-results">Add these CSS rules to your stylesheet:</label> \
+  <pre class="yourtype" id="css-results" readonly> \
   <%- obj %> \
 <% } else { %> \
-  { } \
 <% } %> \
 </pre>';
 

@@ -3,21 +3,21 @@ yourtype.templates = yourtype.templates || {};
 
 yourtype.templates.app = ' \
 <div class="yourtype" id="close-yourtype">x</div> \
-<h3> YourType </h3> \
+<h3 class="yourtype"> YourType </h3> \
 <!-- the selected element has classes --> \
 <%if (klasses !== null) { %> \
   <span class="yourtype" id="currently-editing"> \
-    You are currently editing <strong><%=elTag %></strong> elements, with the below classes: \
+    You are currently editing <strong class="yourtype"><%= elTag %></strong> elements, with the below classes: \
   </span> \
   <div class="yourtype edit-class" id="classes-to-select"> \
     <% _.each(klasses, function (klass) { %> \
-      <span class="yourclass" id="<%= klass %>"> <%= klass %> </span> \
+      <span class="yourtype" id="<%= klass %>"><%= klass %></span> \
     <% }); %> \
   </div> \
   <!-- the selected element doesn\'t have classes --> \
 <% } else { %> \
   <span class="yourtype" id="currently-editing"> \
-    You are currently editing <strong> <%= elTag %> </strong> elements: \
+    You are currently editing <strong class="yourtype"> <%= elTag %> </strong> elements: \
   </span> \
 <% } %> \
 <form class="yourtype" id="form-container"></form> \

@@ -41,6 +41,7 @@ yourtype.FormView = Backbone.View.extend({
       newStyles['line-height'] = 'initial';
     }
 
+    
     this.model.updateStyles(yourtype.data.elTag, newStyles);
   },
 

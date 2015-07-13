@@ -13,12 +13,11 @@ yourtype.AppView = Backbone.View.extend({
       model: this.model
     });
   },
+
   template: _.template(yourtype.templates.app),
 
   render: function (elementPosition) {
     this.setPositioning(elementPosition);
-
-    console.log('yourtype.data in app.view', yourtype.data);
     this.$el.html(this.template(yourtype.data));
     this.form.setElement(this.$('form.yourtype#form-container')).render();
     this.cssResults.setElement(this.$('div.yourtype#css-container')).render();

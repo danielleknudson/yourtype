@@ -1,6 +1,7 @@
 {
+  "manifest_version": 2,
   "name": "YourType",
-  "description": "For development and design use only. Only works with <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <p>, <span>, <ul>, <li>, <label>, and <a> elements. If page elements have styles defined by their classes and ids, YourType may not work depending on specificity rating.",
+  "description": "For development and design use only. Only works with h1, h2, h3, h4, h5, h6, span, p, li, div, label, pre, and td elements. If page elements have styles defined by their classes and ids, YourType may not work depending on specificity rating.",
   "version": "0.0.0",
   "permissions": [
     "activeTab"
@@ -17,6 +18,6 @@
   "browser_action": {
     "default_title": "YourType",
     "default_icon": "assets/19_logo.png"
-  },
-  "manifest_version": 2
+  }
 }
+

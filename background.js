@@ -5,48 +5,60 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
   // No tabs or host permissions needed!
 
-  chrome.tabs.executeScript({
-    file: 'lib/jquery.min.js'
-  });
-
-  chrome.tabs.executeScript({
-    file: 'lib/underscore-min.js'
-  });
-
-  chrome.tabs.executeScript({
-    file: 'lib/mustache.min.js'
-  });
-
-  chrome.tabs.executeScript({
-    file: 'lib/backbone-min.js'
-  });
-
-  chrome.tabs.executeScript({
-    file: 'app/googleFonts.js'
-  });
-
-  chrome.tabs.executeScript({
-    file: 'app/templates/data.js'
-  });
-
-  chrome.tabs.executeScript({
-    file: 'app/templates/template.js'
-  });
-
-  chrome.tabs.executeScript({
-    file: 'app/models/fontsApp.js'
-  });
-
-  chrome.tabs.executeScript({
-    file: 'app/views/fontsView.js'
-  });
-
-  chrome.tabs.executeScript({
-    file: 'app/app.js'
+  chrome.tabs.insertCSS({
+    file: 'client/lib/font-awesome-4.3.0/css/font-awesome.min.css'
   });
 
   chrome.tabs.insertCSS({
-    file: 'app/styles/styles.css'
+    file: 'client/css/styles.css'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/lib/jquery.min.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/lib/underscore-min.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/lib/backbone-min.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/javascripts/yourtype.data.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/templates/cssresults.template.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/templates/form.template.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/templates/app.template.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/javascripts/models/app.model.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/javascripts/views/cssresults.view.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/javascripts/views/form.view.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/javascripts/views/app.view.js'
+  });
+
+  chrome.tabs.executeScript({
+    file: 'client/javascripts/app.js'
   });
 
 });
