@@ -1,6 +1,6 @@
 # YourType
 
-Easily edit your web page's typography and copy corresponding CSS.
+Chrome extension written in Backbone.js to allow you to easily edit your web page's typography and copy corresponding CSS.
 
 ## Team
 
