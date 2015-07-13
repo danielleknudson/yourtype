@@ -33,7 +33,7 @@
 Use github’s interface to make a fork of the repo, then add that repo as an upstream remote:
 
 ```
-git remote add upstream https://github.com/hackreactor-labs/<NAME_OF_REPO>.git
+git remote add upstream https://github.com/danielleknudson/yourtype.git
 ```
 
 ### Cut a namespaced feature branch from master
@@ -50,7 +50,7 @@ These commands will help you do this:
 ``` bash
 
 # Creates your branch and brings you there
-git checkout -b `your-branch-name`
+git checkout -b `bug/feat/test/doc/refactor-branch-name`
 ```
 
 ### Make commits to your feature branch. 
