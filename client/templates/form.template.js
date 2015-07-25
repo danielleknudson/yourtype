@@ -4,7 +4,7 @@ yourtype.templates = yourtype.templates || {};
 yourtype.templates.form = '\
         <!-- font family --> \
         <label class="yourtype" for="font-family">Font Family</label> \
-        <div class="yourtype tooltip" id="info">i</div> \
+        <div class="yourtype tooltip" id="info"><i class="fi-info"></i></div> \
         <select class="yourtype" id="font-family"> \
           <% _.each(fonts, function (font) { %> \
             <option class="yourtype" val="<%= font.name %>"> \

@@ -32,17 +32,19 @@ span#currently-editing.yourtype strong.yourtype {
 
 /*Label Styles*/
 form#form-container.yourtype label.yourtype {
-  color: #d2d8dc!important;
+  color: #FFFFFF!important;
 }
 
 form#form-container.yourtype label.yourtype,
 div#css-container.yourtype label.yourtype  {
   display: inline-block!important;
   margin-top: 15px!important;
+  margin-bottom: 5px!important;
 }
 
 div#css-container.yourtype pre#css-results.yourtype {
-  color: #F2594B!important;
+  color: #FFFFFF!important;
+  text-shadow: none!important;
 }
 
 div#css-container.yourtype label.yourtype {
@@ -57,9 +59,6 @@ form#form-container.yourtype label.yourtype:first-child {
 form#form-container.yourtype div#info.yourtype {
   display: inline!important;
   font-size: 10px!important;
-  padding: 1px 3px!important;
-  background: #45515a!important;
-  border: 1px solid #3e4850!important;
 }
 
 form#form-container.yourtype div#info.yourtype.tooltip {
@@ -67,11 +66,15 @@ form#form-container.yourtype div#info.yourtype.tooltip {
   position: relative!important;
 }
 
+form#form-container.yourtype div#info.yourtype.tooltip .fa.fa-info-circle {
+  color: #FFFFFF!important;
+}
+
 form#form-container.yourtype div#info.yourtype.tooltip:hover:after {
-  background: #fbceca!important;
+  background: #000000!important;
   text-shadow: none!important;
   border-radius: 3px!important;
-  color: #364047!important;
+  color: #FFFFFF!important;
   content: "You may need to install these fonts to your computer in order to see font changes take effect."!important;
   padding: 15px!important;
   z-index: 1000000000!important;

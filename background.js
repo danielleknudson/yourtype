@@ -6,7 +6,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   // No tabs or host permissions needed!
 
   chrome.tabs.insertCSS({
-    file: 'client/lib/font-awesome-4.3.0/css/font-awesome.min.css'
+    file: 'client/lib/foundation-icons/foundation-icons.css'
   });
 
   chrome.tabs.insertCSS({
